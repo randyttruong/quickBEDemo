@@ -1,0 +1,45 @@
+\frametitle{\textbf{impl \# 1: kosaraju's algorithm}}
+\begin{block}{\textbf{algorithm pseudocode}}
+\begin{columns}[onlytextwidth,b]
+  \column{.49\linewidth}
+    \begin{lstlisting}
+|\textcolor{red}{main}|() {
+  vec<int> = component(-1, n);
+  vec<int> results;
+  int num = 0;
+  |\textcolor{green}{// 1st dfs}|
+  forn (i, 0, n)
+    if (!was[i]) |\textcolor{blue}{dfs\_1}|(i);
+  reverse(all(results));
+  |\textcolor{green}{// 2nd dfs}|
+  for (int i: results) {
+    if (component[v] == -1) { |\textcolor{green}{//if v not in a component}|
+      |\textcolor{blue}{dfs\_2}|(v);
+      num++;
+    }
+  }
+}
+\end{lstlisting}
+  \column{.49\linewidth}
+    \begin{lstlisting}
+|\textcolor{blue}{dfs\_1}|(int v) {
+  was[v] = true;
+  for (int i : graph[v]) {
+    if (!was[i]) |\textcolor{blue}{dfs\_1}|(i);
+  }
+  results.pb(i):
+}
+|\hfill|
+|\textcolor{blue}{dfs\_2}|(int v, int num) {
+  component[v] = num;
+  for (int i : graph_t[v]) {
+    if (component[v] == -1)
+      |\textcolor{blue}{dfs\_2}|(i);
+  }
+}
+
+|\hfill|
+\end{lstlisting}
+\end{columns}
+
+\end{block}

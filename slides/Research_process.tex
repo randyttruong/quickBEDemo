@@ -1,0 +1,402 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla} % like this one 
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier} % this one is good too 
+%\usetheme{PaloAlto}
+\usetheme{Pittsburgh} % this one <3 
+%\usetheme{Rochester} % this one is clean too 
+%\usetheme{Singapore} % meh 
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{listings}
+
+\usepackage{courier}
+
+\lstset{basicstyle=\scriptsize\ttfamily,breaklines=true, escapechar={|}}
+\lstset{framextopmargin=50pt}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Intro to BE + Flask]{Introduction to BE Development + Flask} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Randy Truong}  % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+\textit{rtruong@u.northwestern.edu} % Your email address
+}
+\date{\today } % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{conceptual intro to be dev} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge Introduction to BE Development
+\end{center}
+\end{frame}
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{full stack application explanation}
+\begin{block}{\textbf{introduction}}
+  at its core:
+  \begin{itemize}
+    \item \textbf{frontend.} a html, css, js program that (mostly) just
+          renders things to the screen.
+    \item \textbf{backend.} a \textit{separate} program that allows us
+          to offload these computations to another machine
+  \end{itemize}
+
+\end{block}
+\end{frame}
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{look into full stack dev}
+\begin{frame}
+\frametitle{full stack application explanation}
+\begin{block}{\textbf{introduction}}
+  at its core:
+  \begin{itemize}
+    \item \textbf{frontend.} a html, css, js program that (mostly) just
+          renders things to the screen.
+          \begin{itemize}
+            \item \textcolor{red}{buttons on the website will allow u to perform different
+                  computations + functionalities}
+          \end{itemize}
+
+    \item \textbf{backend.} a \textit{separate} program that allows us
+          to offload these computations to another machine
+          \begin{itemize}
+            \item \textcolor{red}{can be done in most languages (primary ones are python,
+                  js, and java)}
+            \item \textcolor{red}{primary function is to be an \textit{event handler}
+            \item \textcolor{red}{frontend will communicate to the backend, to which}
+                  the backend will respond}
+          \end{itemize}
+
+  \end{itemize}
+
+\end{block}
+\end{frame}
+%------------------------------------------------
+
+
+
+%------------------------------------------------
+
+\subsection{be dev narrowing}
+\begin{frame}
+\frametitle{what is be dev?}
+\begin{block}{\textbf{}}
+  \textit{backend dev} is a request handler
+  \begin{itemize}
+    \item the client tells the be application to do something $\rightarrow$
+          be application does the thing $\rightarrow$ be application reports
+          back to the client
+    \item bank metaphor (but before computers idk)
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{what is be dev?}
+\begin{block}{\textbf{}}
+  \textit{backend dev} is a request handler
+
+  \begin{itemize}
+    \item you, a customer of the bank, wants to retrieve your account
+          balance
+    \item you talk to a teller and indicate to them that you
+          want to retrieve your balance
+    \item teller tells internal staff about ur request and they
+          go into the bank vault and count ur money
+    \item internal staff tells the teller ur account balance
+    \item teller tells u ur account balance
+
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{what is be dev?}
+\begin{block}{\textbf{}}
+  ok cool, but how does it work?
+  \begin{itemize}
+    \item \textbf{remark.} backends are \textit{separate applications}
+          from the frontend
+    \item they are apps that are designed to \textit{listen} for requests
+          \begin{enumerate}
+            \item think of the backend as basically just being a dictionary
+                  for mapping requests to functions
+                  \begin{enumerate}
+                    \item receive request from client (``i want $x$'')
+                    \item checks for an entry for this type of request
+                    \item respond to the client in either outcome
+                  \end{enumerate}
+          \end{enumerate}
+  \end{itemize}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{be dev narrowing}
+\begin{frame}
+\frametitle{what is be dev?}
+\begin{block}{\textbf{}}
+  thus, the ``format'' of a backend application is
+  as follows:
+  \begin{itemize}
+    \item setup listening (usually done by the package/framework)
+    \item define your ``request dictionary''. for each request:
+          \begin{itemize}
+            \item define what a client should ``say'' in order to
+                  demonstrate that it wants to do something (key)
+            \item define a function that executes following that request (value)
+                  \begin{itemize}
+                    \item we can either perform that computation within the
+                          be application itself
+                    \item or just send ANOTHER request to another application
+                  \end{itemize}
+          \end{itemize}
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{be dev narrowing}
+\begin{frame}
+\frametitle{what is be dev?}
+\begin{block}{\textbf{}}
+  thus, the ``format'' of a backend application is
+  as follows:
+  \begin{itemize}
+    \item setup listening (usually done by the package/framework)
+    \item define your ``request dictionary''. for each request:
+          \begin{itemize}
+            \item define what a client should ``say'' in order to
+                  demonstrate that it wants to do something (key)
+            \item define a function that executes following that request (value)
+                  \begin{itemize}
+                    \item we can either perform that computation within the
+                          be application itself
+                    \item or just send ANOTHER request to another application
+                  \end{itemize}
+          \end{itemize}
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+
+
+%------------------------------------------------
+
+\subsection{be frameworks}
+\begin{frame}
+\frametitle{frameworks?}
+\begin{block}{\textbf{}}
+  in order to do the things i just described is
+  \textit{complicated}. we can do them in c
+  and python without installing anything, but it
+  sucks and there's a lot of places to fail
+  \begin{itemize}
+    \item frameworks abstract away all of the
+          complex code for sending requests
+    \item using frameworks, we can just think
+          of a be application as just being a
+          dictionary
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{flask demo}
+\begin{frame}
+\frametitle{flask?}
+\begin{block}{\textbf{}}
+  flask is a lightweight be framework in python
+  \begin{itemize}
+    \item super easy to use
+    \item doesn't any config (think react config)
+    \item super intuitive
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{flask demo}
+\begin{frame}
+\frametitle{flask?}
+\begin{block}{\textbf{}}
+  flask is a lightweight be framework in python
+  \begin{itemize}
+    \item super easy to use
+    \item doesn't any config (think react config)
+    \item super intuitive
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{flask demo}
+\begin{frame}
+\frametitle{flask?}
+\begin{block}{\textbf{}}
+  again, a flask application is mostly just going
+  to be a response handler
+  \begin{itemize}
+    \item \textbf{routes} create a mapping
+          between a request type and a response
+    \item how to test it?
+          \begin{itemize}
+            \item we can either send a request from browser (where
+                  browser is the client)
+            \item or make a python program that sends requests (where
+                  this separate py program is a client)
+          \end{itemize}
+  \end{itemize}
+
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge flask demo time
+\end{center}
+\end{frame}
+%------------------------------------------------
+
+
+
+\end{document}

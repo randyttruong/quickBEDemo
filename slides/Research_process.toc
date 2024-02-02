@@ -1,9 +1,0 @@
-\beamer@sectionintoc {1}{conceptual intro to be dev}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{look into full stack dev}{5}{0}{1}
-\beamer@subsectionintoc {1}{2}{be dev narrowing}{6}{0}{1}
-\beamer@subsectionintoc {1}{3}{be dev narrowing}{9}{0}{1}
-\beamer@subsectionintoc {1}{4}{be dev narrowing}{10}{0}{1}
-\beamer@subsectionintoc {1}{5}{be frameworks}{11}{0}{1}
-\beamer@subsectionintoc {1}{6}{flask demo}{12}{0}{1}
-\beamer@subsectionintoc {1}{7}{flask demo}{13}{0}{1}
-\beamer@subsectionintoc {1}{8}{flask demo}{14}{0}{1}
